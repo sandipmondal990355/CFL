@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: StartSmart
+
+  datasource:
+    url: jdbc:postgresql://43.204.42.69:5432/StartSmart
+    username: postgres
+    password: pgadmin
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        default_schema: startsmart
+
+    show-sql: true
+
+    generate-ddl: false
+
+    hibernate:
+      ddl-auto: update
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: manpreetkaur622495@gmail.com
+    password: vjvowouuwjexaths
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          ssl:
+            trust: smtp.gmail.com
+
+server:
+  port: 9085
+
+eureka:
+  instance:
+    prefer-ip-address: true
+
+  client:
+    fetch-registry: true
+    enabled: false
+
+user:
+  fetch:
+    API: http://43.205.24.208:9020/employee/eCode/
+
+file:
+  upload-dir: uploads
